@@ -448,6 +448,8 @@ scale_color_bnssg <- function(palette = "main", discrete = FALSE, reverse = FALS
   }
 }
 
+scale_colour_bnssg <- scale_color_bnssg
+
 scale_fill_bnssg <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
   pal <- bnssg_pal(palette = palette, reverse = reverse)
   
@@ -481,7 +483,7 @@ ggplot(
       colour = factor(cyl)
     )
   ) +
-  scale_colour_bnssg() +
+  scale_colour_bnssg(discrete=TRUE) +
   bnssgtheme() +
   labs(
     title = "Chart of qsec against wt for the mtcars dataset",
